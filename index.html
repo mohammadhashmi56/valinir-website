@@ -1,325 +1,251 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Valinir | AI Infrastructure, Built to Scale</title>
-  <meta name="description" content="Valinir builds production-grade AI infrastructure that replaces manual business operations with intelligent systems." />
-  <meta name="theme-color" content="#050505" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="VALINIR is an AI implementation and automation company based in Dubai. We integrate AI into your operations, streamline workflows and improve efficiency.">
+<meta name="theme-color" content="#0A0A0A">
+<title>VALINIR — AI Implementation &amp; Automation</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,300;0,400;1,300&display=swap">
+<style>
+:root{--bg:#0A0A0A;--bg2:#101010;--line:rgba(255,255,255,.09);--base:#E2E2E2;--mute:#8E8E8E;--acc:#fff;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0A0A0A;--bg2:#101010;--line:rgba(255,255,255,.09);--base:#E2E2E2;--mute:#8E8E8E;--acc:#fff}}
+:root[data-theme="dark"]{--bg:#0A0A0A;--bg2:#101010;--line:rgba(255,255,255,.09);--base:#E2E2E2;--mute:#8E8E8E;--acc:#fff}
+*{box-sizing:border-box;margin:0}
+html{background:var(--bg);scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px)}
+body{background:var(--bg);color:var(--base);font:300 17px/1.65 Inter,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit;text-decoration:none}em{font-style:italic;color:var(--acc)}
+.c{max-width:1280px;margin:auto;padding:0 clamp(20px,5vw,56px)}
+.wm{display:flex;align-items:baseline;font-weight:300;letter-spacing:.14em;padding-left:.14em;line-height:1;white-space:nowrap;position:relative}
+.wm>*{display:inline-block}.wm i{font-style:italic;color:#fff}
+.wm>:nth-child(1){margin-right:-.035em}.wm>:nth-child(2){margin-right:.02em}.wm>:nth-child(3){margin-right:-.01em}.wm>:nth-child(4){margin-right:.04em}.wm>:nth-child(6){margin-right:.01em}
+#ld{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;cursor:pointer;transition:opacity .9s ease,visibility .9s}
+#ld.out{opacity:0;visibility:hidden}.lw{font-size:clamp(28px,8.5vw,96px)}.lw>*{opacity:0}
+.nv{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:env(safe-area-inset-top,0px);background:rgba(10,10,10,.6);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nvi{display:flex;justify-content:space-between;align-items:center;height:68px}.nw{font-size:15px}
+.nl{display:flex;gap:32px;align-items:center;font-size:14px;letter-spacing:.04em;color:var(--mute)}.nl a{transition:color .3s}.nl a:hover{color:#fff}
+.pill{border:1px solid rgba(255,255,255,.25);padding:9px 20px;border-radius:99px;color:#fff!important;transition:background .3s,color .3s!important}.pill:hover{background:#fff;color:#000!important}
+#pg{position:absolute;left:0;right:0;bottom:-1px;height:1px;background:#fff;transform-origin:0 50%;transform:scaleX(0)}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:140px 0 110px}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(255,255,255,.055) 1px,transparent 1px) 0 0/25% 100%;-webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000,transparent 75%);mask-image:radial-gradient(ellipse at 50% 40%,#000,transparent 75%)}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(700px circle at var(--mx,72%) var(--my,28%),rgba(255,255,255,.085),transparent 60%)}
+.hero .c{position:relative;z-index:2;width:100%}
+.eb{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--mute)}
+h1{font-weight:300;font-size:clamp(46px,9.4vw,152px);line-height:.98;letter-spacing:-.035em;margin:28px 0}
+h2{font-weight:300;font-size:clamp(32px,5vw,66px);line-height:1.08;letter-spacing:-.025em}
+.sub{max-width:540px;color:var(--mute);font-size:clamp(16px,1.5vw,19px)}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:40px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 30px;border-radius:99px;font-size:15px;letter-spacing:.03em;border:1px solid rgba(255,255,255,.25);transition:all .4s cubic-bezier(.22,1,.36,1)}
+.btn.p{background:#fff;color:#000;border-color:#fff;font-weight:400}.btn.p:hover{background:transparent;color:#fff}.btn:hover{border-color:#fff}.btn span{transition:transform .4s}.btn:hover span{transform:translateX(5px)}
+.cue{position:absolute;z-index:2;left:0;right:0;bottom:calc(30px + env(safe-area-inset-bottom,0px))}.cue .c{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--mute)}
+.cue b{font-weight:300;display:flex;align-items:center;gap:14px}.cue b::after{content:"";width:1px;height:38px;background:linear-gradient(#fff,transparent);animation:dr 2.2s ease-in-out infinite;transform-origin:top}
+@keyframes dr{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+.h{opacity:0;transform:translateY(30px);filter:blur(8px);transition:opacity 1.3s cubic-bezier(.22,1,.36,1),transform 1.3s cubic-bezier(.22,1,.36,1),filter 1.3s;transition-delay:var(--d,0s)}
+.go .h{opacity:1;transform:none;filter:none}
+.rv{opacity:0;transform:translateY(32px);filter:blur(6px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1),filter 1.1s;transition-delay:var(--d,0s)}.rv.in{opacity:1;transform:none;filter:none}
+section{padding:clamp(80px,12vw,170px) 0;position:relative}
+.mq{overflow:hidden;border-block:1px solid var(--line);padding:26px 0;white-space:nowrap}
+.mt{display:inline-flex;animation:mq 45s linear infinite}.mt span{font-size:clamp(30px,4.4vw,60px);font-weight:200;letter-spacing:.06em;padding-right:.7em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.3)}.mt span:nth-child(even){-webkit-text-stroke:0;color:#fff;font-style:italic}
+@keyframes mq{to{transform:translateX(-50%)}}
+.st{font-size:clamp(26px,4.4vw,58px);line-height:1.18;letter-spacing:-.02em;max-width:1080px;color:#fff}.st span{opacity:.16;transition:opacity .3s}
+.hd{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:clamp(44px,6vw,80px)}.hd h2{max-width:720px;margin-top:20px}.hd p{max-width:380px;color:var(--mute)}
+.gr{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.cd{position:relative;background:var(--bg);padding:clamp(28px,3vw,44px);min-height:310px;display:flex;flex-direction:column;overflow:hidden;transition:background .5s}
+.cd::before{content:"";position:absolute;inset:0;background:radial-gradient(380px circle at var(--x,50%) var(--y,0),rgba(255,255,255,.09),transparent 65%);opacity:0;transition:opacity .5s}.cd:hover::before{opacity:1}.cd>*{position:relative}
+.n{font-size:13px;letter-spacing:.2em;color:var(--mute)}.cd h3{font-weight:400;font-size:22px;line-height:1.25;letter-spacing:-.01em;margin:auto 0 14px;padding-top:60px;color:#fff}.cd p{color:var(--mute);font-size:15px;line-height:1.65}
+.ai{text-align:center;overflow:hidden;padding:clamp(60px,9vw,130px) 0}
+.big{font-size:clamp(180px,38vw,560px);line-height:.85;font-weight:200;font-style:italic;letter-spacing:-.04em;background:linear-gradient(180deg,#fff 10%,rgba(255,255,255,.04) 95%);-webkit-background-clip:text;background-clip:text;color:transparent;display:block;padding-right:.08em;will-change:transform}
+.ai p{max-width:560px;margin:34px auto 0;color:var(--mute)}.ai h2{margin-top:-4vw;position:relative}
+.stp{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,48px)}
+.pl{height:1px;background:rgba(255,255,255,.55);transform:scaleX(0);transform-origin:0 50%;transition:transform 1.6s cubic-bezier(.65,0,.35,1);margin-bottom:28px}.pl.in{transform:none}
+.stp h3{font-weight:300;font-size:30px;letter-spacing:-.02em;color:#fff;margin:10px 0 12px}.stp p{color:var(--mute);font-size:15px}
+.pr{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,64px);margin-top:clamp(70px,9vw,120px)}.pr div{border-top:1px solid var(--line);padding-top:26px}.pr h3{font-weight:400;font-size:19px;color:#fff;margin-bottom:10px}.pr p{color:var(--mute);font-size:15px}
+.ct{text-align:center;border-top:1px solid var(--line);background:radial-gradient(ellipse 60% 55% at 50% 100%,rgba(255,255,255,.07),transparent 70%)}
+.ct h2{font-size:clamp(42px,8vw,120px);line-height:1;margin:24px 0}.ct .sub{margin:0 auto}.ct .cta{justify-content:center}
+.ln{display:flex;justify-content:center;gap:clamp(24px,6vw,80px);flex-wrap:wrap;margin-top:70px;font-size:14px;color:var(--mute)}.ln b{display:block;font-weight:300;font-size:11px;letter-spacing:.28em;text-transform:uppercase;margin-bottom:8px;color:#5f5f5f}.ln a:hover{color:#fff}
+footer{border-top:1px solid var(--line);padding:34px 0 calc(34px + env(safe-area-inset-bottom,0px));font-size:13px;color:var(--mute)}footer .c{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}footer .wm{font-size:14px}
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.sc{min-height:340px}.sv{font-size:clamp(50px,5.6vw,88px);font-weight:200;letter-spacing:-.04em;line-height:1;color:#fff;margin-bottom:auto;padding-bottom:56px;font-variant-numeric:tabular-nums;white-space:nowrap}.sc p{color:var(--base);font-size:15px;line-height:1.6;margin-bottom:18px}.sc small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#6a6a6a;border-top:1px solid var(--line);padding-top:14px}
+.gp{margin-top:clamp(36px,5vw,64px);border:1px solid var(--line);padding:clamp(24px,4vw,56px)}.br{display:grid;grid-template-columns:minmax(200px,320px) 1fr 64px;gap:28px;align-items:center;padding:24px 0;border-top:1px solid var(--line);margin-top:18px}.br span{font-size:16px;color:var(--base)}.br b{font-weight:300;font-size:26px;color:#fff;text-align:right;letter-spacing:-.02em}.bar{height:3px;background:rgba(255,255,255,.1);overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,rgba(255,255,255,.3),#fff);transform:scaleX(0);transform-origin:0 50%;transition:transform 2.2s cubic-bezier(.22,1,.36,1) var(--dl,.3s)}.gp.in .bar i{transform:scaleX(var(--w))}.gp>p{color:var(--mute);margin-top:6px;max-width:560px}.fn{margin-top:34px;font-size:12px;line-height:1.7;color:#666;max-width:900px}
+.tg{display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);margin-bottom:34px}.rg{width:46px;height:46px;transform:rotate(-90deg)}.rg circle{fill:none;stroke-width:2}.rg .bg{stroke:rgba(255,255,255,.13)}.rg .fg{stroke:#fff;stroke-linecap:round;stroke-dasharray:100px;stroke-dashoffset:100px;transition:stroke-dashoffset 2.4s cubic-bezier(.22,1,.36,1) .3s}.in .rg .fg{stroke-dashoffset:calc(100px - var(--p)*1px)}.sc small a{transition:color .3s}.sc small a:hover{color:#fff}.sc small a::after{content:" \2197"}
+.gf{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;margin-top:30px;padding-top:30px;border-top:1px solid var(--line)}.gf p{max-width:560px;font-size:clamp(19px,2.1vw,26px);line-height:1.3;color:#fff;letter-spacing:-.01em}
+@media(max-width:900px){.sg{grid-template-columns:1fr 1fr}}@media(max-width:640px){.sg{grid-template-columns:1fr}.sc{min-height:260px}.br{grid-template-columns:1fr auto;gap:14px}.br span{grid-column:1/-1}.br .bar{grid-column:1}}
+@media(max-width:900px){.gr{grid-template-columns:1fr 1fr}.stp{grid-template-columns:1fr 1fr;row-gap:50px}.pr{grid-template-columns:1fr}}
+@media(max-width:640px){.nl a:not(.pill){display:none}.gr{grid-template-columns:1fr}.stp{grid-template-columns:1fr}.cd{min-height:240px}.cue .c span{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.h,.pl{opacity:1!important;transform:none!important;filter:none!important}#ld{display:none}.st span{opacity:1!important}html{scroll-behavior:auto}}
+main{transition:opacity .38s ease,filter .38s ease}main.fo,main.fi{opacity:0;filter:blur(8px)}
+.pg-c .pill{background:#fff;color:#000!important}
+.cp{position:relative;min-height:100svh;padding:150px 0 110px;overflow:hidden}
+.cp::before{content:"";position:absolute;inset:0;background:linear-gradient(to right,rgba(255,255,255,.05) 1px,transparent 1px) 0 0/25% 100%;-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000,transparent 75%);mask-image:radial-gradient(ellipse at 50% 30%,#000,transparent 75%)}
+.cp::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(800px circle at 85% 8%,rgba(255,255,255,.07),transparent 60%)}
+.cp .c{position:relative;z-index:2}.gh{position:absolute;right:-3vw;bottom:-9vw;font-size:clamp(240px,42vw,680px);line-height:.8;font-style:italic;font-weight:200;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.07);pointer-events:none;user-select:none}
+.cp h1{font-size:clamp(44px,8vw,120px);margin:20px 0 26px}.bk{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);display:inline-block;transition:color .3s,transform .3s}.bk:hover{color:#fff;transform:translateX(-4px)}
+.cg{display:grid;grid-template-columns:5fr 7fr;gap:clamp(36px,7vw,110px);margin-top:clamp(50px,7vw,100px);align-items:start}
+.ib{margin-bottom:38px;font-size:clamp(18px,1.8vw,22px);color:#fff}.ib b{display:block;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:#5f5f5f;font-weight:300;margin-bottom:10px}.ib a{border-bottom:1px solid rgba(255,255,255,.3);transition:border-color .3s}.ib a:hover{border-color:#fff}
+.nx{list-style:none;padding:0;margin:6px 0 0;color:var(--mute);font-size:15px}.nx li{display:flex;gap:18px;padding:16px 0;border-top:1px solid var(--line)}.nx span{color:#fff;font-size:12px;letter-spacing:.2em;padding-top:3px}
+.fm{position:relative;overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));padding:clamp(24px,4vw,56px)}
+.fm::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(440px circle at var(--x,50%) var(--y,0),rgba(255,255,255,.07),transparent 65%);opacity:0;transition:opacity .5s}.fm:hover::before{opacity:1}.fm>*{position:relative}
+.ch{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.chip{border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:9px 17px;font:300 14px Inter,"Helvetica Neue",Arial,sans-serif;color:var(--base);background:none;cursor:pointer;transition:all .35s cubic-bezier(.22,1,.36,1)}.chip:hover{border-color:#fff}.chip.on{background:#fff;color:#000;border-color:#fff;transform:translateY(-1px)}
+.fl{position:relative;margin-top:30px}.fl input,.fl textarea{width:100%;background:none;border:0;border-bottom:1px solid var(--line);padding:24px 0 10px;color:#fff;font:300 18px Inter,"Helvetica Neue",Arial,sans-serif;outline:0;resize:none;border-radius:0}.fl label{position:absolute;left:0;top:24px;color:var(--mute);transition:all .35s cubic-bezier(.22,1,.36,1);pointer-events:none;font-size:17px}
+.fl input:focus+label,.fl input:not(:placeholder-shown)+label,.fl textarea:focus+label,.fl textarea:not(:placeholder-shown)+label{top:0;font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+.fl i{position:absolute;left:0;bottom:0;height:1px;width:100%;background:#fff;transform:scaleX(0);transform-origin:0 50%;transition:transform .7s cubic-bezier(.22,1,.36,1)}.fl input:focus~i,.fl textarea:focus~i{transform:scaleX(1)}
+@keyframes sk{20%{transform:translateX(-6px)}40%{transform:translateX(5px)}60%{transform:translateX(-3px)}80%{transform:translateX(2px)}}.fl.er{animation:sk .4s}.fl.er i{background:#ff7a7a;transform:scaleX(1)}.fl.er label{color:#ff7a7a}
+.sb{margin-top:38px;cursor:pointer;font-family:inherit}.hn{margin-top:16px;font-size:12px;color:#666}
+.fm.done>*:not(.ok){display:none}.ck{width:64px;height:64px;margin-bottom:22px}.ck circle,.ck path{fill:none;stroke:#fff;stroke-width:1.5;stroke-dasharray:100px;stroke-dashoffset:100px;animation:dw 1.1s cubic-bezier(.65,0,.35,1) forwards}.ck path{animation-delay:.5s}@keyframes dw{to{stroke-dashoffset:0}}
+.ok h3{font-weight:300;font-size:30px;color:#fff;margin-bottom:10px;letter-spacing:-.02em}.ok p{color:var(--mute)}.ok pre{white-space:pre-wrap;font:300 14px/1.6 Inter,"Helvetica Neue",Arial,sans-serif;color:var(--base);background:rgba(255,255,255,.04);border:1px solid var(--line);padding:18px;margin:22px 0;max-height:200px;overflow:auto}.oa{display:flex;gap:12px;flex-wrap:wrap}.oa .btn{cursor:pointer;font-family:inherit}
+@media(max-width:900px){.cg{grid-template-columns:1fr}.ci{order:2}}
+@media(prefers-reduced-motion:reduce){.ck circle,.ck path{stroke-dashoffset:0!important}main.fo,main.fi{filter:none}}
+</style>
 </head>
 <body>
-  <div class="loader" aria-hidden="true">
-    <span>VALINIR</span>
-    <strong>AI INFRASTRUCTURE, BUILT TO SCALE</strong>
-  </div>
+<div id="ld" aria-hidden="true"><div class="wm lw" id="lw"><span>V</span><i>A</i><span>L</span><i>I</i><span>N</span><span>I</span><span>R</span></div></div>
+<nav class="nv"><div class="c nvi"><a href="#top" class="wm nw" aria-label="VALINIR"><span>V</span><i>A</i><span>L</span><i>I</i><span>N</span><span>I</span><span>R</span></a><div class="nl"><a href="#services">Services</a><a href="#approach">Approach</a><a href="#contact" class="pill">Contact</a></div></div><div id="pg"></div></nav>
+<main id="home">
+<header class="hero" id="top"><div class="c">
+<div class="eb h">AI Implementation &amp; Automation · Dubai</div>
+<h1 class="h" style="--d:.15s">Intelligence,<br><em>implemented.</em></h1>
+<p class="sub h" style="--d:.3s">VALINIR integrates AI into the way your business actually runs, automating workflows, removing friction and turning efficiency into a lasting advantage.</p>
+<div class="cta h" style="--d:.45s"><a class="btn p" href="#contact">Start a conversation <span>→</span></a><a class="btn" href="#services">Explore services</a></div>
+</div><div class="cue h" style="--d:.8s"><div class="c"><b>Scroll</b><span>Dubai, UAE</span></div></div></header>
 
-  <div class="cursor" aria-hidden="true"></div>
-  <div class="noise" aria-hidden="true"></div>
+<div class="mq" aria-hidden="true"><div class="mt"><span>Automation</span><span>AI agents</span><span>Integration</span><span>Strategy</span><span>Enablement</span><span>Intelligence</span><span>Automation</span><span>AI agents</span><span>Integration</span><span>Strategy</span><span>Enablement</span><span>Intelligence</span></div></div>
 
-  <header class="site-header">
-    <a class="brand magnetic" href="#top" aria-label="Valinir home">
-      <span>Valinir</span>
-    </a>
-    <button class="menu-toggle magnetic" type="button" aria-label="Open navigation" aria-expanded="false">+ Menu</button>
-    <nav class="main-nav" aria-label="Primary navigation">
-      <a href="#work">Work</a>
-      <a href="#systems">Systems</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<section><div class="c"><div class="eb rv">Our belief</div><p class="st" id="st" style="margin-top:34px">Most companies don’t need more AI. They need it put to work. We find where intelligence changes your operations, build it into your workflows, and make it run, quietly and reliably, every single day.</p></div></section>
 
-  <main id="top">
-    <section class="hero light-section">
-      <div class="hero-image reveal">
-        <img src="assets/valinir-forest-hero.png" alt="Dark motion-blurred forest used as Valinir hero atmosphere" />
-        <span class="color-leak"></span>
-      </div>
-      <div class="hero-content reveal">
-        <h1 aria-label="A clear AI plan for your business"><span>A clear AI plan</span><em>for your business</em></h1>
-        <p class="hero-sub">We build the infrastructure businesses need to apply AI where it actually matters - without the noise.</p>
-      </div>
-      <div class="hero-actions">
-        <a class="pill dark magnetic" href="#contact">Request a build session</a>
-        <a class="pill light magnetic" href="#work">See how it works</a>
-      </div>
-      <div class="logo-row" aria-label="Client systems">
-        <span>Calescent</span><span>Boltshift</span><span>Interlock</span><span>Focalpoint</span>
-      </div>
-    </section>
+<section id="numbers" style="padding-top:0"><div class="c">
+<div class="hd"><div><div class="eb rv">By the numbers</div><h2 class="rv" style="--d:.1s">Less overhead. More growth. <em>Faster</em> execution.</h2></div><p class="rv" style="--d:.2s">Documented outcomes from businesses that put intelligent automation to work.</p></div>
+<div class="sg">
+<div class="cd sc rv"><div class="tg">Grow revenue<svg class="rg" viewBox="0 0 46 46" style="--p:50" aria-hidden="true"><circle class="bg" cx="23" cy="23" r="21" pathLength="100"/><circle class="fg" cx="23" cy="23" r="21" pathLength="100"/></svg></div><div class="sv">+<span class="cnt" data-to="50">50</span>%</div><p>increase in B2B lead conversion after a telecom company adopted AI-powered targeting and automated lead generation.</p><small><a href="https://www.ey.com/en_ie/services/ai/case-studies/how-ai-can-enhance-b2b-sales" target="_blank" rel="noopener">EY · Telecom</a></small></div>
+<div class="cd sc rv" style="--d:0.1s"><div class="tg">Grow revenue<svg class="rg" viewBox="0 0 46 46" style="--p:22" aria-hidden="true"><circle class="bg" cx="23" cy="23" r="21" pathLength="100"/><circle class="fg" cx="23" cy="23" r="21" pathLength="100"/></svg></div><div class="sv">+<span class="cnt" data-to="22">22</span>%</div><p>increase in ad-driven revenue from AI-personalized, multilingual advertising, with return on ad spend up 35%.</p><small><a href="https://cloud.google.com/customers/radisson" target="_blank" rel="noopener">Radisson · Google Cloud</a></small></div>
+<div class="cd sc rv" style="--d:0.2s"><div class="tg">Reduce costs<svg class="rg" viewBox="0 0 46 46" style="--p:30" aria-hidden="true"><circle class="bg" cx="23" cy="23" r="21" pathLength="100"/><circle class="fg" cx="23" cy="23" r="21" pathLength="100"/></svg></div><div class="sv"><span class="cnt" data-to="30">30</span>%</div><p>improvement in finance operational cost efficiency, with the monthly close 40% faster, after moving finance to the cloud and automating it.</p><small><a href="https://www.accenture.com/en/case-studies/communications-media/bt-group-making-finance-brilliant" target="_blank" rel="noopener">BT Group · Accenture</a></small></div>
+<div class="cd sc rv" style="--d:0.3s"><div class="tg">Move faster<svg class="rg" viewBox="0 0 46 46" style="--p:80" aria-hidden="true"><circle class="bg" cx="23" cy="23" r="21" pathLength="100"/><circle class="fg" cx="23" cy="23" r="21" pathLength="100"/></svg></div><div class="sv"><span class="cnt" data-to="80">80</span>%</div><p>reduction in proposal response time with Microsoft 365 Copilot, alongside a 20% gain in gross margins.</p><small><a href="https://www.microsoft.com/en/customers/story/23620-icg-microsoft-365-copilot" target="_blank" rel="noopener">ICG · Microsoft</a></small></div>
+</div>
+<div class="gp rv"><div class="eb">The implementation gap</div>
+<div class="br"><span>Using AI in at least one function</span><div class="bar"><i style="--w:.88"></i></div><b>88%</b></div>
+<div class="br"><span>Scaling AI across the enterprise</span><div class="bar"><i style="--w:.33;--dl:.6s"></i></div><b>~33%</b></div>
+<div class="gf"><p>VALINIR closes that gap, taking AI from pilot to daily operation. We’ll estimate your potential return from your actual operations.</p><a class="btn p" href="#contact" data-t="ROI estimate">Get your ROI estimate <span>→</span></a></div></div>
+<p class="fn rv">Illustrative results from third-party case studies (EY, Google Cloud, Accenture, Microsoft) and McKinsey’s “The state of AI in 2025”. Outcomes vary by organization and implementation, and these are not VALINIR client results. BT Group’s figure reflects a broader cloud and automation transformation, not AI alone.</p>
+</div></section>
 
-    <section class="intro dark-section" id="work">
-      <div class="media-card reveal">
-        <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
-        <div class="meta-line"><span>How we work</span><b>2:30</b></div>
-        <h2>How we help you use AI without the hype</h2>
-        <div class="video-frame">
-          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=85" alt="Modern meeting room" />
-          <button type="button" aria-label="Play overview">Play</button>
-        </div>
-        <p>We're a hands-on infrastructure team focused on helping companies use automation where it matters most.</p>
-      </div>
-      <div class="intro-copy reveal">
-        <div class="section-kicker"><span></span> 01 Who we are</div>
-        <p data-scroll-words>We're a hands-on team focused on helping serious companies replace repetitive work with AI systems that actually hold up in production.</p>
-        <div class="person-line">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="">
-          <span><b>Jessica Burns</b> Client success manager</span>
-        </div>
-      </div>
-    </section>
+<section id="services" style="padding-top:0"><div class="c">
+<div class="hd"><div><div class="eb rv">What we do</div><h2 class="rv" style="--d:.1s">Everything it takes to make AI <em>work</em> inside your business.</h2></div><p class="rv" style="--d:.2s">From the first audit to ongoing support, one team takes AI from idea to daily operation.</p></div>
+<div class="gr">
+<div class="cd rv"><span class="n">01</span><h3>AI Strategy &amp; Opportunity Mapping</h3><p>We audit your operations to find where AI creates real, measurable value, and where it doesn’t.</p></div>
+<div class="cd rv" style="--d:.08s"><span class="n">02</span><h3>Workflow Automation</h3><p>Repetitive, rule-heavy processes become automated pipelines that run around the clock without delay or error.</p></div>
+<div class="cd rv" style="--d:.16s"><span class="n">03</span><h3>AI Agents &amp; Assistants</h3><p>Custom agents that handle support, sales operations, research and internal requests inside the tools your team already uses.</p></div>
+<div class="cd rv"><span class="n">04</span><h3>Systems Integration</h3><p>AI connected to your CRM, ERP, email, documents and databases, so intelligence lives where your work does.</p></div>
+<div class="cd rv" style="--d:.08s"><span class="n">05</span><h3>Knowledge &amp; Document Intelligence</h3><p>Turn contracts, records and internal knowledge into answers your team can search and act on instantly.</p></div>
+<div class="cd rv" style="--d:.16s"><span class="n">06</span><h3>Training &amp; Ongoing Support</h3><p>We equip your people to work confidently with AI, and stay beside you as your business and your needs evolve.</p></div>
+</div></div></section>
 
-    <section class="services dark-section" id="systems">
-      <div class="services-head reveal">
-        <div class="section-kicker"><span></span> 02 Services</div>
-        <h2>Turning repetitive work into time-saving systems</h2>
-        <div>
-          <p>We provide practical AI infrastructure and automation services for companies that want results - not just theory. Our work is tailored, transparent, and focused on the areas where AI makes a real impact.</p>
-          <a class="pill light magnetic" href="#contact">About us</a>
-        </div>
-      </div>
-      <div class="service-list">
-        <article class="service-row reveal">
-          <span>/01</span>
-          <h3>AI consulting & strategy</h3>
-          <div class="service-system" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-          <p>We turn messy operations into a clear plan: where AI belongs, what to build first, and how value compounds.</p>
-        </article>
-        <article class="service-row reveal">
-          <span>/02</span>
-          <h3>Workflow automation</h3>
-          <div class="service-system" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-          <p>We design and deploy automated systems that replace repetitive tasks across support, finance, intake, routing, and reporting.</p>
-        </article>
-        <article class="service-row reveal">
-          <span>/03</span>
-          <h3>Custom tools & integrations</h3>
-          <div class="service-system" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-          <p>Need something more specific? We build lightweight AI systems tailored to your operation, from data analysis to internal assistants.</p>
-        </article>
-        <article class="service-row reveal">
-          <span>/04</span>
-          <h3>Team onboarding & training</h3>
-          <div class="service-system" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-          <p>AI only works when your team knows how to use it. We train people, document workflows, and support adoption.</p>
-        </article>
-      </div>
-    </section>
+<section class="ai" aria-label="AI is in our name"><div class="c"><span class="big" id="ai" aria-hidden="true">AI</span><h2 class="rv">It’s in our <em>name.</em></h2><p class="rv" style="--d:.15s">Two letters, hidden in plain sight, and built into everything we do for your business.</p></div></section>
 
-    <section class="advantages light-section">
-      <div class="adv-title reveal">
-        <div class="section-kicker dark"><span></span> 03 Why us?</div>
-        <h2><span>Why companies</span> choose Valinir</h2>
-        <p>We make AI adoption simple, strategic, and measurable.</p>
-      </div>
-      <div class="adv-list reveal">
-        <h3>Our advantages include:</h3>
-        <div><b>01</b><span>Clear, actionable strategy</span></div>
-        <div><b>02</b><span>Proven AI frameworks</span></div>
-        <div><b>03</b><span>Hands-on implementation</span></div>
-        <div><b>04</b><span>Transparent costs</span></div>
-      </div>
-      <div class="pocket reveal">
-        <div class="pocket-stats"><b>3x</b><span>Faster approval</span><b>99%</b><span>Uptime</span><b>+28%</b><span>Process coverage</span></div>
-        <h3>Your AI, always in your pocket</h3>
-        <p>Track performance, approve automations, and receive insight from your operating layer.</p>
-        <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=600&q=80" alt="Phone in hand">
-      </div>
-      <div class="fast-track reveal">
-        <h2>The fast track to <span>AI success</span></h2>
-        <p>No generic advice. No complex dashboards. Just practical improvements.</p>
-        <div class="step-grid">
-          <article><b>01/</b><p>Understand your workflow so savings are visible.</p></article>
-          <article><b>02/</b><p>Spot automation opportunities by impact.</p></article>
-          <article><b>03/</b><p>Integrate tools without disrupting operations.</p></article>
-          <article><b>04/</b><p>Measure output and optimize continuously.</p></article>
-        </div>
-      </div>
-    </section>
+<section id="approach"><div class="c">
+<div class="hd"><div><div class="eb rv">How we work</div><h2 class="rv" style="--d:.1s">A clear path from <em>idea</em> to impact.</h2></div></div>
+<div class="stp">
+<div><div class="pl"></div><span class="n">01</span><h3>Discover</h3><p>We learn how your business runs and map the opportunities with the highest value.</p></div>
+<div><div class="pl" style="transition-delay:.2s"></div><span class="n">02</span><h3>Design</h3><p>We architect the solution around your people, your data and the tools you already use.</p></div>
+<div><div class="pl" style="transition-delay:.4s"></div><span class="n">03</span><h3>Deploy</h3><p>We build, test and integrate with minimal disruption to your daily operations.</p></div>
+<div><div class="pl" style="transition-delay:.6s"></div><span class="n">04</span><h3>Evolve</h3><p>We measure results, refine continuously and expand what works across the business.</p></div>
+</div>
+<div class="pr">
+<div class="rv"><h3>Practical, not hype</h3><p>Every engagement starts with a business outcome, never with a technology.</p></div>
+<div class="rv" style="--d:.1s"><h3>Built around you</h3><p>Solutions shaped to your processes, your team and your goals, not a generic template.</p></div>
+<div class="rv" style="--d:.2s"><h3>Responsible with your data</h3><p>Your information and processes are handled with care, with security considered from the first design decision.</p></div>
+</div></div></section>
 
-    <section class="delay light-section">
-      <div class="delay-title reveal">
-        <div class="section-kicker dark"><span></span> 05 Why delay hurts</div>
-        <h2>The longer you wait, the more expensive it becomes <span>to catch up.</span></h2>
-      </div>
-      <div class="cost-rows reveal" aria-label="Operational delay pressure indicators">
-        <div style="--x:76%; --row:0" data-pressure="critical"><span>01/ Operational tasks <b>stay manual</b></span><i>+83%</i><em>/workload</em></div>
-        <div style="--x:45%; --row:1" data-pressure="rising"><span>02/ Competitors <b>move faster</b></span><i>+55%</i><em>/growth</em></div>
-        <div style="--x:55%; --row:2" data-pressure="rising"><span>03/ Missed <b>automation opportunities</b></span><i>+66%</i><em>/opportunities</em></div>
-        <div style="--x:24%; --row:3" data-pressure="latent"><span>04/ Time wasted on <b>repetitive work</b></span><i>+32%</i><em>/time</em></div>
-      </div>
-    </section>
-
-    <section class="case-study light-section">
-      <div class="case-copy reveal">
-        <div class="section-kicker dark"><span></span> 06 Results</div>
-        <h2>Case study</h2>
-        <p>LocalRent Co. partnered with Valinir to streamline order intake and customer support across 18 locations.</p>
-        <dl>
-          <div><dt>Date:</dt><dd>Mar 2026</dd></div>
-          <div><dt>Industry:</dt><dd>Retail & e-commerce</dd></div>
-          <div><dt>Challenge:</dt><dd>Manual intake and support delays</dd></div>
-        </dl>
-        <a class="row-link magnetic" href="#projects">Read the full story <span>></span></a>
-      </div>
-      <div class="case-quote reveal">
-        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1100&q=85" alt="Abstract business document stack">
-        <blockquote>They did not overwhelm us with jargon or endless options. Just a clear plan, executed quickly.</blockquote>
-      </div>
-      <div class="result-card dark-card reveal"><b>50+</b><span>hours saved monthly</span></div>
-      <div class="result-card dark-card reveal"><b>+15%</b><span>increase in retention</span></div>
-    </section>
-
-    <section class="projects light-section" id="projects">
-      <div class="side-label"><span></span> More projects</div>
-      <div class="project-list reveal">
-        <button type="button" data-project="FinEdge Advisors">FinEdge Advisors <span>2026</span></button>
-        <button type="button" data-project="BrightPath International Logistics">BrightPath International Logistics <span>2026</span></button>
-        <button type="button" data-project="Norse Star" class="active">Norse Star <span>2026</span></button>
-        <p>Norse Star came to us before peak season with a simple request: remove the busywork that slows support and frustrates customers.</p>
-        <button type="button" data-project="EduCore Learning">EduCore Learning <span>2026</span></button>
-        <button type="button" data-project="CraftWorks Manufacturing">CraftWorks Manufacturing <span>2026</span></button>
-        <button type="button" data-project="HealthFirst Clinics">HealthFirst Clinics <span>2025</span></button>
-      </div>
-      <figure class="project-preview reveal">
-        <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=750&q=85" alt="Black and white close portrait">
-        <figcaption>Norse Star</figcaption>
-      </figure>
-    </section>
-
-    <section class="team light-section">
-      <div class="team-title reveal"><div class="section-kicker dark"><span></span> 07 Who we are</div><h2>The team</h2></div>
-      <div class="team-grid">
-        <article class="member reveal">
-          <span>AI consultant</span>
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=85" alt="Alex Carter">
-          <h3>Alex Carter</h3><p>15 years in tech strategy</p>
-          <div class="bars"></div><small>AI strategy development</small>
-        </article>
-        <article class="member reveal">
-          <span>Implementation specialist</span>
-          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=85" alt="Emma Lee">
-          <h3>Emma Lee</h3><p>Workflow automation expert</p>
-          <div class="bars"></div><small>Workflow automation</small>
-        </article>
-        <article class="member reveal">
-          <span>AI systems engineer</span>
-          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85" alt="Kevin D">
-          <h3>Kevin D.</h3><p>Backend & integrations</p>
-          <div class="bars"></div><small>API system integrations</small>
-        </article>
-        <article class="member reveal">
-          <span>Client relations</span>
-          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=700&q=85" alt="Laura Stern">
-          <h3>Laura Stern</h3><p>Your favorite contact</p>
-          <div class="bars"></div><small>Client communication</small>
-        </article>
-      </div>
-    </section>
-
-    <section class="cta-band light-section">
-      <div class="color-wash"></div>
-      <h2 class="reveal">No salespeople. No bots. You'll speak directly with us.</h2>
-      <a class="start-card magnetic reveal" href="#contact"><b>Start your project</b><span>></span></a>
-    </section>
-
-    <section class="why light-section">
-      <div class="why-title reveal"><div class="section-kicker dark"><span></span> 08 Why us?</div><h2>Why us</h2></div>
-      <div class="why-cards">
-        <article class="reveal"><span>The team.</span><p>Senior builders who understand business operations.</p></article>
-        <article class="reveal"><span>ROI timeline</span><p>Most clients recover their investment within 1.5 months.</p></article>
-        <article class="reveal"><span>Time saved</span><p>On average, clients reduce manual work by 35 hours/month.</p></article>
-        <article class="reveal"><span>Workflow impact</span><p>We help businesses automate up to 60% of repetitive workflows.</p></article>
-      </div>
-    </section>
-
-    <section class="pricing dark-section" id="pricing">
-      <div class="stat-strip reveal">
-        <div><b>/45</b><span>Avg. ROI in 45 days</span></div>
-        <div><b>/35+</b><span>Hours saved every month</span></div>
-        <div><b>/60</b><span>% routine tasks automated</span></div>
-      </div>
-      <div class="pricing-title reveal"><span>Valinir</span><h2>Pricing.</h2><p>You only pay for what you need after we show you the plan.</p></div>
-      <div class="price-grid">
-        <article class="price-card reveal">
-          <h3>Starter Plan</h3><small>For small teams or first-time AI users</small><b>$199<span>/month</span></b>
-          <ul><li>AI application plan</li><li>Implementation of 1 automation</li><li>Email support for 14 days</li></ul>
-          <a href="#contact">Get starter plan</a>
-        </article>
-        <article class="price-card featured reveal">
-          <h3>Growth Plan</h3><small>For companies ready to automate multiple workflows</small><b>$899<span>/month</span></b>
-          <ul><li>Full workflow analysis</li><li>Roadmap with AI recommendations</li><li>Priority support for 30 days</li><li>Monthly performance report</li></ul>
-          <a href="#contact">Request build session</a>
-        </article>
-        <article class="price-card reveal">
-          <h3>Custom Enterprise Plan</h3><small>For teams with 50+ employees or advanced needs</small><b>$7500<span>/month</span></b>
-          <ul><li>Full AI strategy</li><li>Technical implementation</li><li>Maintenance and optimization</li><li>24/7 support</li></ul>
-          <a href="#contact">Get enterprise plan</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="belief light-section">
-      <div class="belief-portrait reveal"><img src="https://images.unsplash.com/photo-1546961329-78bef0414d7c?auto=format&fit=crop&w=700&q=85" alt="Founder portrait"><span>Laura Stern<br>Founder & AI consultant</span></div>
-      <div class="belief-copy reveal"><div class="section-kicker dark"><span></span> 10 What we believe</div><blockquote>We did not build this company to chase trends. We built it to solve real problems - clearly, quietly, and without wasting your time. AI can be useful, but only if it is done right.</blockquote><p>We're here to make AI work in the real world - without noise, hype, or distractions.</p></div>
-      <div class="timeline">
-        <article><b>2020</b><span>Founded to rethink how technology solves real problems</span></article>
-        <article><b>2023</b><span>Launched our first scalable platform</span></article>
-        <article><b>2024</b><span>Released Valinir's AI framework</span></article>
-        <article><b>2026</b><span>Introduced infrastructure for modern operations</span></article>
-      </div>
-    </section>
-
-    <section class="news light-section">
-      <div class="news-title reveal"><div class="section-kicker dark"><span></span> 11 About AI for business</div><h2>News</h2><a href="#">All articles ></a></div>
-      <div class="article-grid">
-        <article class="reveal"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80" alt=""><span>September 19, 2026</span><h3>5 common mistakes businesses make when adopting AI</h3></article>
-        <article class="reveal"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=600&q=80" alt=""><span>September 10, 2026</span><h3>How to spot AI automation opportunities in your workflow</h3></article>
-        <article class="reveal"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80" alt=""><span>September 3, 2026</span><h3>How a small team saved 50+ hours per month with AI</h3></article>
-        <article class="reveal"><img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=600&q=80" alt=""><span>August 6, 2026</span><h3>Top 10 AI tools every business should consider</h3></article>
-      </div>
-      <form class="newsletter dark-card reveal">
-        <h2>Newsletter</h2>
-        <p>We send occasional updates about new case studies and useful tips.</p>
-        <label>Email <input type="email" placeholder="emailaddress.com"></label>
-        <button type="submit">Get weekly tips <span>></span></button>
-      </form>
-    </section>
-
-    <section class="faq light-section">
-      <div class="faq-title reveal"><div class="section-kicker dark"><span></span> 12 Help & info</div><h2>FAQ</h2></div>
-      <div class="faq-list reveal">
-        <details open><summary>How far in advance should I book?</summary><p>No. Our process is built for business owners and teams who have no technical background. We explain every step in plain language and handle all technical setup and integrations for you.</p></details>
-        <details><summary>How much does the service cost, and what is included?</summary><p>We scope each engagement after the assessment so you know the exact build, timeline, and expected return.</p></details>
-        <details><summary>What if I do not have a technical team?</summary><p>That is normal. Valinir owns implementation and gives your team a simple operating surface.</p></details>
-        <details><summary>What happens if I want to cancel the subscription?</summary><p>You keep the strategy and documentation. Ongoing support can be paused or re-scoped.</p></details>
-      </div>
-    </section>
-
-    <section class="contact light-section" id="contact">
-      <div class="color-wash"></div>
-      <div class="contact-copy reveal">
-        <div class="section-kicker dark"><span></span> 13 Ready to start?</div>
-        <h2>Get in touch</h2>
-        <p>Whether you have questions or just want to explore options, we're here.</p>
-      </div>
-      <form class="contact-form reveal">
-        <label>Name <input type="text" placeholder="Your name"></label>
-        <label>Email address <input type="email" placeholder="emailaddress.com"></label>
-        <button type="submit">Let's talk <span>></span></button>
-      </form>
-      <footer class="footer-nav">
-        <a href="#top" class="brand"><span>Valinir</span></a>
-        <a href="mailto:hello@valinir.com">hello@valinir.com</a>
-        <nav><a href="#top">Home</a><a href="#work">About</a><a href="#systems">Systems</a><a href="#contact">Contact</a></nav>
-      </footer>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
+<section class="ct" id="cta"><div class="c">
+<div class="eb rv">Get in touch</div>
+<h2 class="rv" style="--d:.1s">Let’s put <em>AI</em> to work.</h2>
+<p class="sub rv" style="--d:.2s">Tell us where your business loses time. We’ll show you what intelligence can do about it.</p>
+<div class="cta rv" style="--d:.3s"><a class="btn p" href="#contact">Start a conversation <span>→</span></a></div>
+</div></section>
+</main>
+<main id="contactpg" hidden><div class="cp"><span class="gh" aria-hidden="true">AI</span><div class="c">
+<a href="#top" class="bk rv">← Home</a>
+<div class="eb rv" style="margin-top:46px">Contact</div>
+<h1 class="rv" style="--d:.1s">Let’s put <em>AI</em> to work.</h1>
+<p class="sub rv" style="--d:.2s">Tell us a little about your business and where it loses time. We’ll come back with clear next steps.</p>
+<div class="cg">
+<aside class="ci">
+<div class="ib rv" style="--d:.25s"><b>Email</b><a href="mailto:hello@valinir.com">hello@valinir.com</a></div>
+<div class="ib rv" style="--d:.3s"><b>Location</b>Dubai, United Arab Emirates</div>
+<div class="ib rv" style="--d:.35s"><b>What happens next</b><ol class="nx"><li><span>01</span>We review your message and your business.</li><li><span>02</span>A short discovery call to understand how you operate.</li><li><span>03</span>A tailored roadmap with a clear estimate of your return.</li></ol></div>
+</aside>
+<form class="fm rv" id="fm" novalidate style="--d:.3s">
+<div class="eb">I’m interested in</div>
+<div class="ch"><button type="button" class="chip">Workflow automation</button><button type="button" class="chip">AI agents &amp; assistants</button><button type="button" class="chip">Systems integration</button><button type="button" class="chip">AI strategy</button><button type="button" class="chip">ROI estimate</button></div>
+<div class="fl"><input id="fn" placeholder=" " autocomplete="name"><label for="fn">Your name</label><i></i></div>
+<div class="fl"><input id="fe" type="email" placeholder=" " autocomplete="email"><label for="fe">Work email</label><i></i></div>
+<div class="fl"><input id="fc" placeholder=" " autocomplete="organization"><label for="fc">Company</label><i></i></div>
+<div class="fl"><textarea id="fg" rows="4" placeholder=" "></textarea><label for="fg">How can we help?</label><i></i></div>
+<button class="btn p sb" type="submit">Send message <span>→</span></button>
+<p class="hn">Sending opens your email app with your message ready to go.</p>
+<div class="ok" id="ok" hidden><svg class="ck" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" pathLength="100"/><path d="M15 27l8 8 14-16" pathLength="100"/></svg><h3>Your message is ready.</h3><p>Your email app should have opened with everything filled in. If it didn’t, open it below, or copy the message and send it to hello@valinir.com.</p><pre id="pv"></pre><div class="oa"><a class="btn p" id="ml" href="#contact">Open email app <span>→</span></a><button type="button" class="btn" id="cp">Copy message</button><button type="button" class="btn" id="ed">Edit</button></div></div>
+</form>
+</div></div></div></main>
+<footer><div class="c"><div class="wm" aria-label="VALINIR"><span>V</span><i>A</i><span>L</span><i>I</i><span>N</span><span>I</span><span>R</span></div><span>AI Implementation &amp; Automation</span><span>© 2026 VALINIR. All rights reserved.</span></div></footer>
+<script>
+(function(){
+var d=document,b=d.body,q=function(s,r){return(r||d).querySelector(s)},qa=function(s,r){return[].slice.call((r||d).querySelectorAll(s))};
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches,cl=function(v,a,z){return Math.min(z,Math.max(a,v))};
+var st=q('#st');st.innerHTML=st.textContent.trim().split(/\s+/).map(function(w){return'<span>'+w+'</span>'}).join(' ');
+var W=qa('span',st),ai=q('#ai'),pg=q('#pg');
+function sc(){var m=d.documentElement.scrollHeight-innerHeight;pg.style.transform='scaleX('+(m>0?scrollY/m:0)+')';
+var r=st.getBoundingClientRect(),n=cl((innerHeight*.8-r.top)/(r.height+innerHeight*.3),0,1)*W.length;W.forEach(function(w,i){w.style.opacity=cl(.16+(n-i),.16,1)});
+if(!rm){var a=ai.parentNode.getBoundingClientRect();ai.style.transform='translateY('+((a.top+a.height/2-innerHeight/2)*-.1)+'px)'}}
+addEventListener('scroll',sc,{passive:true});addEventListener('resize',sc);sc();
+function cnt(el){var to=parseFloat(el.dataset.to),dc=+(el.dataset.d||0),t0=null;if(rm){el.textContent=to.toFixed(dc);return}function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/2400),e=1-Math.pow(1-p,4);el.textContent=(to*e).toFixed(dc);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+qa('.cnt').forEach(function(e){e.textContent=(0).toFixed(+(e.dataset.d||0))});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');qa('.cnt',e.target).forEach(cnt);io.unobserve(e.target)}})},{threshold:.15});
+qa('.rv,.pl').forEach(function(e){io.observe(e)});
+qa('.cd').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-r.left+'px');c.style.setProperty('--y',e.clientY-r.top+'px')})});
+var hero=q('.hero');hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();hero.style.setProperty('--mx',e.clientX-r.left+'px');hero.style.setProperty('--my',e.clientY-r.top+'px')});
+var home=q('#home'),cp=q('#contactpg'),isC=null,pre='';
+function route(first){var h=location.hash.slice(1),c=h==='contact';
+if(c===isC){if(!c&&h&&!first){var t0=d.getElementById(h);if(t0)t0.scrollIntoView()}return}
+isC=c;b.classList.toggle('pg-c',c);
+var inn=c?cp:home,out=c?home:cp;
+function sw(){out.hidden=true;out.classList.remove('fo');inn.hidden=false;
+if(!first){inn.classList.add('fi');scrollTo({top:0,behavior:'instant'});void inn.offsetWidth;inn.classList.remove('fi')}
+if(c){if(pre){qa('.chip').forEach(function(x){x.classList.toggle('on',x.textContent===pre)});pre=''}}
+else if(h){var t=d.getElementById(h);if(t)t.scrollIntoView()}
+d.title=c?'Contact \u2014 VALINIR':'VALINIR \u2014 AI Implementation & Automation'}
+if(first||rm){sw()}else{out.classList.add('fo');setTimeout(sw,380)}}
+qa('[data-t]').forEach(function(a){a.addEventListener('click',function(){pre=a.dataset.t})});
+addEventListener('hashchange',function(){route(false)});route(true);
+var fm=q('#fm'),ok=q('#ok'),msg='';
+fm.addEventListener('pointermove',function(e){var r=fm.getBoundingClientRect();fm.style.setProperty('--x',e.clientX-r.left+'px');fm.style.setProperty('--y',e.clientY-r.top+'px')});
+qa('.chip').forEach(function(c){c.addEventListener('click',function(){c.classList.toggle('on')})});
+qa('.fl input,.fl textarea').forEach(function(i){i.addEventListener('input',function(){i.parentNode.classList.remove('er')})});
+fm.addEventListener('submit',function(e){e.preventDefault();
+var g=function(i){return q('#'+i).value.trim()},n=g('fn'),em=g('fe'),co=g('fc'),m=g('fg'),bad=false;
+[['fn',n.length<2],['fe',!/^\S+@\S+\.\S+$/.test(em)],['fg',m.length<10]].forEach(function(p){var f=q('#'+p[0]).parentNode;f.classList.remove('er');if(p[1]){void f.offsetWidth;f.classList.add('er');bad=true}});
+if(bad)return;
+var t=qa('.chip.on').map(function(c){return c.textContent}).join(', ');
+msg='Name: '+n+'\nCompany: '+(co||'-')+'\nEmail: '+em+'\nInterested in: '+(t||'-')+'\n\n'+m;
+var url='mailto:hello@valinir.com?subject='+encodeURIComponent('Enquiry from '+n+(co?' ('+co+')':''))+'&body='+encodeURIComponent(msg);
+q('#ml').href=url;q('#pv').textContent=msg;fm.classList.add('done');ok.hidden=false;
+try{var a=d.createElement('a');a.href=url;a.click()}catch(x){}});
+q('#cp').addEventListener('click',function(){var bt=this;try{navigator.clipboard.writeText(msg).then(function(){bt.textContent='Copied'})}catch(x){}});
+q('#ed').addEventListener('click',function(){fm.classList.remove('done');ok.hidden=true});
+var ld=q('#ld'),done=false;
+function fin(){if(done)return;done=true;b.classList.add('go');ld.classList.add('out');setTimeout(function(){ld.remove()},1000)}
+if(rm){fin();return}
+ld.addEventListener('click',fin);setTimeout(fin,7500);
+var lw=q('#lw'),L=qa('#lw>*'),A=L[1],I=L[3],O=L.filter(function(_,i){return i!=1&&i!=3}),ease='cubic-bezier(.76,0,.24,1)',soft='cubic-bezier(.22,1,.36,1)';
+var sleep=function(ms){return new Promise(function(r){setTimeout(r,ms)})};
+function run(el,kf,o){var a=el.animate(kf,Object.assign({fill:'both'},o));return a.finished.then(function(){try{a.commitStyles()}catch(e){}a.cancel()})}
+Promise.all([d.fonts.load('300 1em Inter'),d.fonts.load('italic 300 1em Inter')]).catch(function(){}).then(async function(){
+await Promise.all(L.map(function(l,i){return run(l,[{opacity:0,transform:'translateY(.16em)',filter:'blur(8px)'},{opacity:1,transform:'none',filter:'blur(0px)'}],{duration:900,delay:i*70,easing:soft})}));
+await sleep(550);
+var fs=parseFloat(getComputedStyle(lw).fontSize),ls=.14*fs,gap=.09*fs,aG=A.offsetWidth-ls,iG=I.offsetWidth-ls,s=lw.offsetWidth/2-(aG+gap+iG)/2,dA=Math.round(s-A.offsetLeft),dI=Math.round(s+aG+gap-I.offsetLeft);
+await Promise.all(O.map(function(l,i){return run(l,[{opacity:1,filter:'blur(0px)'},{opacity:0,filter:'blur(8px)'}],{duration:700,delay:i*40})}).concat([
+run(A,[{transform:'translateX(0px)'},{transform:'translateX('+dA+'px)'}],{duration:1100,delay:400,easing:ease}),
+run(I,[{transform:'translateX(0px)'},{transform:'translateX('+dI+'px)'}],{duration:1100,delay:400,easing:ease}),
+run(lw,[{transform:'scale(1)'},{transform:'scale(1.35)'}],{duration:1100,delay:400,easing:ease})]));
+await sleep(600);fin()});
+})();
+</script>
 </body>
 </html>
